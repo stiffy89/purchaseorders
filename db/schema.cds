@@ -8,7 +8,7 @@ entity PurchaseOrders {
         Units: Integer;
         Date: Date;
         Price: Decimal(13,3);
-        Product: Association to one Products;
+        ProductID: Association to one Products;
         BusinessPartner: Association to one BusinessPartner;
         Currency: Association to one Currency;
 }
