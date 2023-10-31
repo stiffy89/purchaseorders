@@ -8,12 +8,12 @@ entity PurchaseOrders {
         Units: Integer;
         Date: Date;
         Price: Decimal(13,3);
-        ProductID: Association to one Products;
-        BusinessPartner: Association to one BusinessPartner;
-        Currency: Association to one Currency;
+        Product: Association to one Products;
+        BusinessPartner: Association to one BusinessPartners;
+        Currency: Association to one Currencies;
 }
 
 entity Products as projection on external.ProductSet;
-entity BusinessPartner as projection on external.BusinessPartnerSet;
-entity Currency as projection on external.VH_CurrencySet;
+entity BusinessPartners as projection on external.BusinessPartnerSet;
+entity Currencies as projection on external.VH_CurrencySet;
 
