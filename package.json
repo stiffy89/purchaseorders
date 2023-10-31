@@ -21,7 +21,14 @@
     "requires": {
       "gwsample": {
         "kind": "odata-v2",
-        "model": "srv/external/gwsample"
+        "model": "srv/external/gwsample",
+        "csrf": true,
+        "csrfInBatch": true,
+        "[backend]": {
+          "credentials": {
+              "destination": "ES5"
+          }
+        }
       }
     }
   },
